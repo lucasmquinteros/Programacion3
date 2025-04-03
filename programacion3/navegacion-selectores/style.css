@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  background-color: #333;
+  color: #f0f0f0;
+}
+#about-us,
+#contact,
+#gallery {
+  width: 600px;
+  margin: 100px auto;
+}
+
+#contact label {
+  width: 100%;
+  margin: 20px;
+  padding: 10px;
+}
+
+.cube {
+  display: inline-block;
+  height: 100px;
+  width: calc(25% - 42px);
+  padding: 10px;
+  margin: 10px;
+  background-color: aquamarine;
+  border: 1px solid #fff;
+  border-radius: 20px 0px;
+}
+* {
+  scroll-behavior: smooth;
+}
+
+input [type="nombre"],
+input[type="email"] {
+  all: unset;
+  border-bottom: 1px solid #f0f0f0;
+  border-radius: 5px;
+}

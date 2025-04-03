@@ -1,0 +1,12 @@
+body {
+  margin: 0;
+  background-color: #ccc;
+}
+/*
+para dentro .box .title
+para el siguiente "+" 
+para HIJOS DIRECTOS ">"
+ */
+.box > .title {
+  color: red;
+}

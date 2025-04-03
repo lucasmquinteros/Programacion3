@@ -1,0 +1,28 @@
+ul {
+  list-style-type: none;
+}
+
+.productos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.productos article {
+  box-shadow: 0 0 4px #000;
+  border-radius: 8px;
+  padding: 8px;
+  width: 200px;
+  display: grid;
+  place-items: center;
+  transition: all ease 300ms;
+}
+
+.productos article img {
+  width: 80%;
+}
+
+.productos article:hover {
+  transform: translateY(-3px);
+}

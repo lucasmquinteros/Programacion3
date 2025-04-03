@@ -1,0 +1,33 @@
+body {
+  background-color: #ccc;
+}
+
+.my-box {
+  color: aliceblue;
+  background-color: rgb(37, 24, 24);
+  text-align: center;
+  width: 150px;
+  padding: 10px;
+  border: 1px solid red;
+  box-sizing: border-box;
+  margin: 15px auto;
+  position: sticky;
+  top: 0px;
+}
+
+.my-box2 {
+  color: aliceblue;
+  background-color: rgb(37, 24, 24);
+  text-align: center;
+  width: auto;
+  padding: 10px;
+  border: 1px solid red;
+  box-sizing: border-box;
+  margin: 0 auto;
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  z-index: 2;
+
+  border-radius: 100%;
+}
