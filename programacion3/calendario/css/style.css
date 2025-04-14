@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+  background-color: white;
+  border: 1px solid black;
+}
+h1 {
+  color: #f0f0f0;
+  background-color: red;
+  text-align: center;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+section {
+  height: 250px;
+  border-top: 1px solid black;
+  display: grid;
+}
+ol {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  height: 10px;
+  padding-right: 50px;
+}
+li {
+  color: black;
+  border-style: ridge;
+  text-align: end;
+  height: 30px;
+}
+.dia,
+.diaD {
+  color: black;
+  text-align: center;
+}
+.diaD {
+  color: red;
+  text-align: end;
+}
