@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f0f0f0;
+}
+@keyframes moveX {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(80vw);
+  }
+}
+
+@keyframes opacity {
+  1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.ball {
+  width: 100px;
+  height: 100px;
+  background-color: #3498db;
+  border-radius: 50%;
+  border: 1px solid #00436f;
+  display: inline-block;
+  /*
+  animation-name: moveX;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+*/
+  animation: moveX 3s linear infinite alternate,
+    opacity 3s linear infinite alternate;
+}

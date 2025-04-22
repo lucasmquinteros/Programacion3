@@ -1,0 +1,74 @@
+:root {
+  --c-color: #d0d0d0;
+  --f-color: #d7b8b8;
+  --mi-fondo: linear-gradient(to right, var(--c-color), var(--f-color));
+  --mi-card: linear-gradient(to right, var(--f-color), var(--c-color));
+}
+.dark-mode {
+  --c-color: #545559;
+  --f-color: #00000061;
+  --mi-fondo: linear-gradient(to right, var(--c-color), var(--f-color));
+  --mi-card: linear-gradient(to right, var(--f-color), var(--c-color));
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  transition: all 0.5s linearq;
+  font-family: Arial, sans-serif;
+  background-color: #ccc;
+  margin: 0;
+  background: var(--mi-fondo);
+  display: flex;
+  flex-direction: column;
+}
+h1 {
+  text-align: center;
+  margin: 20px 0;
+  color: #000;
+}
+article {
+  width: 400px;
+  margin: 15px auto 0;
+  padding: 10px;
+  border: 1px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: var(--mi-card);
+  border-radius: 5% 5% 5% 0;
+}
+div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+div p {
+  font-weight: bold;
+}
+img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+p {
+  margin: 5px;
+}
+button {
+  background-color: #5e5c5c;
+  color: #fff;
+  border: 1px solid #000;
+  padding: 10px 20px;
+  border-radius: 15%;
+  transition: all 0.3s ease;
+}
+button:hover {
+  background-color: #4e4c4c;
+  transform: scale(1.02);
+  cursor: pointer;
+}

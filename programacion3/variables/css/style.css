@@ -1,0 +1,42 @@
+:root {
+  --f-size: 24px;
+  --p-color: #fa6464;
+  --s-color: #513992;
+  --mi-fondo: linear-gradient(to right, var(--p-color), var(--s-color));
+  --img-nose: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSg1tsdcFZ-d5OqhlYQW3UuLypy3nyBcNB9yA&s);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  background: var(--mi-fondo);
+  color: #333;
+  margin: 0;
+}
+
+main {
+  width: fit-content;
+  margin: 0 auto;
+}
+
+section {
+  padding: 10px;
+  border: 1px solid #000;
+  width: 400px;
+  border-radius: 6% 0 6% 0;
+  --f-size: 50px;
+}
+section h3 {
+  font-size: var(--f-size);
+}
+section p {
+  font-size: calc(var(--f-size)-6px);
+  margin: 10px 0;
+}
+h2 {
+  font-size: var(--f-size);
+}
