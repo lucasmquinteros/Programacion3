@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/index.css" />
+    <link rel="stylesheet" href="../css/crear.css" />
+    <script src="../js/funcionalidades.js" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <h1>Creador de historias</h1>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li><a href="./index.html">Inicio</a></li>
+          <li><a href="./historias.html">Historias</a></li>
+          <li><a href="./pages/crear.html">Crear historia</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="historia">
+        <article>
+          <h2>Crea tu propia historia!</h2>
+          <textarea
+            name="Historia"
+            id="historia"
+            placeholder="Aqui escribe tu historia"
+          ></textarea>
+          <div class="historia__botones">
+            <button id="guardar">Guardar historia</button>
+            <button id="publicar">Publicar historia</button>
+          </div>
+        </article>
+      </section>
+      <section class="desiciones">
+        <div id="app">
+          <div id="story-view"></div>
+          <div id="edit-section">
+            <textarea
+              id="current-passage"
+              placeholder="Escribe tu pasaje aquí..."
+            ></textarea>
+            <button id="add-option">Agregar opción</button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
