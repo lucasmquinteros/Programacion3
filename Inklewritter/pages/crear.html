@@ -13,16 +13,17 @@
       <h1>Creador de historias</h1>
       <nav class="nav">
         <ul class="nav__list">
-          <li><a href="./index.html">Inicio</a></li>
+          <li><a href="../index.html">Inicio</a></li>
           <li><a href="./historias.html">Historias</a></li>
           <li><a href="./pages/crear.html">Crear historia</a></li>
         </ul>
       </nav>
     </header>
     <main>
+      <h2>Crea tu propia historia!</h2>
       <section class="historia">
-        <article>
-          <h2>Crea tu propia historia!</h2>
+        <article class="historia__articulo">
+          <h3>Escribe tu historia</h3>
           <textarea
             name="Historia"
             id="historia"
@@ -34,6 +35,11 @@
           </div>
         </article>
       </section>
+      <p class="aclaracion">
+        Una vez que haya terminado la historia y haya que tomar una desicion
+        para continuar aprete en guardar y ingrese la desicion, y cuantas
+        quiere.
+      </p>
       <section class="desiciones">
         <div id="app">
           <div id="story-view"></div>
@@ -42,7 +48,10 @@
               id="current-passage"
               placeholder="Escribe tu pasaje aquí..."
             ></textarea>
-            <button id="add-option">Agregar opción</button>
+            <div class="Botones">
+              <button id="add-option">Agregar opción</button>
+              <button id="guardar">Guardar historia</button>
+            </div>
           </div>
         </div>
       </section>
