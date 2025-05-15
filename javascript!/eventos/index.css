@@ -1,0 +1,20 @@
+.claro {
+  background-color: #ccc;
+  color: #000;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.oscuro {
+  background-color: #333;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.modo {
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid #000;
+  background-color: rgba(153, 205, 50, 0.53);
+}
+
+textarea {
+  display: block;
+}
