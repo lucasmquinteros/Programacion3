@@ -1,24 +1,42 @@
-import './style.css'
-import typescriptLogo from './typescript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.ts'
+import "./style.css";
 
-document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://www.typescriptlang.org/" target="_blank">
-      <img src="${typescriptLogo}" class="logo vanilla" alt="TypeScript logo" />
-    </a>
-    <h1>Vite + TypeScript</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite and TypeScript logos to learn more
-    </p>
-  </div>
-`
+const $ul: HTMLUListElement = document.getElementById(
+  "taskList"
+)! as HTMLUListElement;
 
-setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
+const $form: HTMLFormElement = document.getElementById(
+  "task-form"
+) as HTMLFormElement;
+
+const $input: HTMLInputElement = document.getElementById(
+  "taskInput"
+) as HTMLInputElement;
+
+$form.addEventListener("submit", (event: SubmitEvent) => {
+  event.preventDefault();
+  const taskText = $input.value.trim();
+  //valido input
+  if (taskText === "") return;
+  //creo el li y el boton
+  const $li = document.createElement("li");
+  $li.textContent = taskText;
+  $li.classList.add("task-item");
+  const $deleteButton: HTMLButtonElement = document.createElement("button");
+  $deleteButton.textContent = "Delete";
+  $deleteButton.classList.add("delete-button");
+  //agrego el evento al boton
+  $deleteButton.addEventListener("click", () => {
+    // Eliminar el li del ul
+    $ul.removeChild($li);
+    // Actualizar localStorage
+    localStorage.setItem("tasks", $ul.innerHTML);
+  });
+  //agrego el li al ul y lo guardo en localStorage
+  $li.appendChild($deleteButton);
+  $ul.appendChild($li);
+  localStorage.setItem("tasks", $ul.innerHTML);
+  $input.value = "";
+});
+
+// Cargar tareas del localStorage al cargar la página
+$ul.innerHTML = localStorage.getItem("tasks") || "";
