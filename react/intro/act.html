@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>react</title>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <script type="text/babel">
+      const divRoot = document.getElementById("root");
+      const root = ReactDOM.createRoot(divRoot);
+
+      const body = (
+        <>
+          <fieldset placeholder="Quejas">
+            <legend>gatitos!</legend>
+            <h1>Hola React</h1>
+            <form action="">
+              <label for="animos">Tu estado de animo: </label>
+              <input id="animos" type="text" placeholder="Feliz"></input>
+            </form>
+            <picture>
+              <img
+                src="https://i0.wp.com/puppis.blog/wp-content/uploads/2022/02/abc-cuidado-de-los-gatos-min.jpg?resize=521%2C346&ssl=1"
+                alt="algo"
+              ></img>
+            </picture>
+          </fieldset>
+          <button>Like</button>
+        </>
+      );
+
+      const app = (
+        <>
+          {" "}
+          {body}
+          {body}
+          {body}
+        </>
+      );
+      root.render(app);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+h1 {
+  color: chocolate;
+  text-align: center;
+  font-size: 100px;
+}
+.contadores {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+button {
+  background-color: lightblue;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.inputControlado {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.contenedorInput {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.inputControlado input,
+label {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.mostrarOcultar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}

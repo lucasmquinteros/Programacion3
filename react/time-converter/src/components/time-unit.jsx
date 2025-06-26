@@ -1,6 +1,6 @@
 import { useId } from "react";
 
-export const TimeUnit = ({ label, name, value, onChange }) => {
+const TimeUnit = ({ label, name, value, onChange }) => {
   const id = useId();
 
   return (
@@ -16,3 +16,5 @@ export const TimeUnit = ({ label, name, value, onChange }) => {
     </div>
   );
 };
+
+export default TimeUnit;

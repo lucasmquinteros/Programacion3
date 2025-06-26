@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>react</title>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <script type="text/babel">
+      const divRoot = document.getElementById("root");
+      const root = ReactDOM.createRoot(divRoot);
+      const nombres = ["Juan", "Maria", "Pedro", "Ana"];
+      //renderizar / pintar / construir / montar / hidratar
+
+      // Re-renderizar / actualizar / re-hidratar
+
+      // Incrustar - es un término más específico que se refiere a insertar un componente dentro de otro, como un componente hijo dentro de un componente padre. Incrustar expresiones
+      // sintaxis -> {aqui iria la expresión}
+
+      // Hidratar - es el proceso de tomar un componente que ya ha sido renderizado en el servidor y "hidratarlo" en el cliente, permitiendo que React tome el control del DOM existente. Esto es útil para aplicaciones que utilizan renderizado del lado del servidor (SSR).
+      // Desmontar - es el proceso de eliminar un componente del DOM, liberando los recursos asociados a él.
+
+      const nombre = "Juan";
+      const edad = 20;
+      const body = (
+        <>
+          <h1>Hola Mundo: {nombre}</h1>
+          <p>Mi primer componente en React</p>
+          <hr />
+          <h2>Hola, soy un componente de clase</h2>
+          <h3>{edad <= 17 ? "Eres menor de edad" : "Eres mayor de edad"}</h3>
+          <ul>
+            {nombres.map((n) => (
+              <li>{n}</li>
+            ))}
+          </ul>
+        </>
+      );
+      const app = <> {body} </>;
+      root.render(app);
+    </script>
+  </body>
+</html>
